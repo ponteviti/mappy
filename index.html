@@ -26,7 +26,7 @@
       document.addEventListener('DOMContentLoaded', function() {
         // see how what the example spreadsheet looks like:
         // https://docs.google.com/spreadsheet/lv?key=0Ao5u1U6KYND7dGN5QngweVJUWE16bTRob0d2a3dCbnc
-        var URL = "https://docs.google.com/spreadsheets/d/1JnEWbf5X173-btFOhMkRUm8BIKTmKaCIM2mbIoQEBFA/edit?usp=sharing"
+        var URL = "https://docs.google.com/spreadsheets/d/1JnEWbf5X173-btFOhMkRUm8BIKTmKaCIM2mbIoQEBFA"
         Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
       })
 
@@ -36,8 +36,8 @@
         // an html template for your popup
         var template = "<ul><li><h4>{{COD_EXPTE}}</h4></li>"
                      + "<li><p>{{SITUACION}}</p></li>"
-        + "<li><p>{{SOLICITUD}}</p></li>"
-                + "<li><p>{{ESTADO}}</p></li></ul>"
+                     + "<li><p>{{SOLICITUD}}</p></li>"
+                      + "<li><p>{{ESTADO}}</p></li></ul>"
         var geoJSON = Sheetsee.createGeoJSON(data, optionsJSON)
         var map = Sheetsee.loadMap("map")
         // Try different map tiles? examples.map-20v6611k
